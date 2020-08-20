@@ -1,9 +1,16 @@
 
-public class FibonacciSeries
+import java.util.Scanner; 
+
+public class FibonacciSequence
 {
   public static void main(String[] args)
   {
-    int numbers = 8;
+    Scanner fibonacci = new Scanner(System.in);
+    int numbers; 
+    
+    System.out.println("Enter the number that you want to calculate the Fibonacci sequence of: "); 
+    numbers = fibonacci.nextInt();
+    
     int[] series = new int[numbers];
      
     series[0] = 0;
@@ -14,7 +21,7 @@ public class FibonacciSeries
       series[f] = series[f-1] + series[f-2];
     }
     
-     System.out.println( "Fibonacci Series of " + numbers + " numbers." );
+     System.out.println( "Fibonacci Sequence of " + numbers + " numbers." );
      
     for ( int f = 0; f < numbers; f++ )
     {
